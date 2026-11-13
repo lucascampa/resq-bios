@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ResQ Intelligence · Team</title>
+  <meta name="description" content="Meet the ResQ Intelligence team. Disaster-site rescue robotics: search, connect, save lives.">
+  <meta property="og:title" content="ResQ Intelligence · Team">
+  <meta property="og:description" content="Meet the ResQ Intelligence team. Search. Connect. Save lives.">
+  <meta property="og:image" content="images/logo.png">
+  <meta name="theme-color" content="#0A1B2C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <img class="logo" src="images/logo.png" alt="ResQ Intelligence logo" width="96" height="96">
+    <h1>ResQ Intelligence</h1>
+    <p class="tagline">Search. Connect. Save lives.</p>
+    <p class="intro">Meet the Team</p>
+  </header>
+
+  <main>
+    <section class="team" aria-label="Team">
+      <div class="cards">
+        <article class="card" id="lucas">
+          <img class="photo" src="images/lucas.png" alt="Lucas Campagnaro" width="160" height="160">
+          <h3>Lucas Campagnaro</h3>
+          <p class="role">Technology, R&amp;D</p>
+          <ul class="tags" aria-label="Keywords">
+            <li>Applied AI</li>
+            <li>Machine Learning</li>
+            <li>Software Engineering</li>
+            <li>Python</li>
+            <li>Operations Research</li>
+          </ul>
+          <p class="hook"><strong>I build AI and software, and I spent enough years on the business side to know what's worth building.</strong></p>
+          <p>Before my master's in Data Science &amp; AI at Rutgers, I automated things for commodities traders at BASF, the FICC desks at Bank of America, and my family's manufacturing firm. Now I lead and build: an award-winning ML research team at DIMACS, and an AI video-generation pipeline at Rang Technologies.</p>
+          <p>If you're building something hard, I'd like to hear about it.</p>
+          <details class="more">
+            <summary><span class="when-closed">More about me</span><span class="when-open">Show less</span></summary>
+            <p>Most of my career was spent on the side of the table that has the problem. At BASF, I automated the Excel controls commodities traders used for their positions. At Bank of America, I ran and automated macro-driven risk reporting for the FICC desks. At my family's manufacturing firm, I spent three years writing SQL against SAP and replacing manual accounting entries with proper workflows. In all three I ended up as the person who automated things, partly because I love all things technical, and partly because nobody else was going to. At some point that stopped being a side habit, so I came to Rutgers for a master's in Data Science &amp; AI to do it properly.</p>
+            <p>At DIMACS, I led a research team testing whether an interpretable model could keep up with XGBoost (it got within 1.6 points, 91.98% vs. 93.56%). The Python package I wrote became the whole team's tooling, I worked with the model's authors to patch bugs in their code, and I received the Outstanding Team Lead Extern Award. As an AI intern at Rang Technologies, I built a pipeline that turns a slide deck and a script into a narrated training video, AI presenter included, running on a laptop CPU without a single paid API. I also built a full-stack attendance system, and a small offline PDF tool my colleagues run straight from a shared drive, because nothing they handle should be uploaded to a random website.</p>
+            <p>The building started before any of it was technical. In college, I was a founding member and later President of FEI Finance, which began as an idea on paper with almost no members. I built its weekly operating model and recruiting pipeline, and grew its speaker events from about 20 people to 150+. The difference now is that I write the code myself.</p>
+          </details>
+          <div class="links">
+            <a class="icon-link" href="https://www.linkedin.com/in/lucascampagnaro/" aria-label="Lucas Campagnaro on LinkedIn">
+              <img src="images/icons/linkedin.png" alt="" width="32" height="32">
+            </a>
+            <a class="icon-link" href="https://github.com/lucascampa" aria-label="Lucas Campagnaro on GitHub">
+              <img src="images/icons/github.png" alt="" width="32" height="32">
+            </a>
+          </div>
+          <p class="email"><a class="email-link" href="mailto:lucascamp75@gmail.com"><svg class="mail-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.6 2L12 12.7 19.4 7H4.6ZM4 17h16V9.1l-8 6.1-8-6.1V17Z"/></svg><span>lucascamp75@gmail.com</span></a><button class="copy-btn" type="button" data-copy="lucascamp75@gmail.com" aria-label="Copy email address" title="Copy email address">
+              <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H5a2 2 0 0 0-2 2v13h2V3h11V1Zm3 4H9a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H9V7h10v14Z"/></svg>
+              <span class="copy-status" role="status" aria-live="polite"></span>
+            </button></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Lucas Campagnaro</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var status = btn.querySelector('.copy-status');
+        function done(msg) {
+          status.textContent = msg;
+          setTimeout(function () { status.textContent = ''; }, 1800);
+        }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          done(ok ? 'Copied' : 'Copy failed');
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback);
+        } else {
+          fallback();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

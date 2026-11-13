@@ -1,0 +1,234 @@
+:root {
+  --bg: #0A1B2C;
+  --accent: #F2C465;
+  --heading: #F7F7F5;
+  --body: #C9D5DF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--heading);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.site-header,
+main,
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.logo { display: block; margin: 0 auto 1rem; height: auto; }
+
+.site-header h1 { font-size: 2.25rem; }
+
+.tagline {
+  color: var(--accent);
+  font-family: "Exo 2", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.intro {
+  margin: 0 auto;
+  color: var(--heading);
+  font-family: "Exo 2", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+main { padding-top: 2rem; padding-bottom: 2rem; }
+
+h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid rgba(242, 196, 101, 0.35);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.card h3 { font-size: 1.4rem; }
+
+.role {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.card p { text-align: left; }
+
+.card .role { text-align: center; margin-bottom: 0.75rem; }
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 0.4rem;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.tags li {
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.hook strong { color: var(--heading); }
+
+.more summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.more summary::-webkit-details-marker { display: none; }
+
+.more summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.more[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+
+.more .when-open { display: none; }
+.more[open] .when-open { display: inline; }
+.more[open] .when-closed { display: none; }
+
+.more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-link img { display: block; width: 32px; height: 32px; }
+.card .email {
+  text-align: center;
+  margin: 0.5rem 0 0;
+}
+
+.email a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.email a:hover span,
+.email a:focus-visible span { text-decoration: underline; }
+
+.mail-icon { flex: none; }
+
+.card .email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 40px;
+  min-height: 44px;
+  justify-content: center;
+  margin-left: -0.5rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  color: var(--body);
+  opacity: 0.7;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.copy-btn:hover,
+.copy-btn:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.copy-status:empty { display: none; }
+
+.todo { color: var(--accent); font-style: italic; }
+
+.site-footer {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--accent);
+  text-align: center;
+}
+
+a { color: var(--accent); }
